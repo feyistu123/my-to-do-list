@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>      
+            <button id="toggle-form-btn" class="btn-primary">+ New Task</button>          
+        </header>
+
+        <main class="content-wrapper">
+            <aside class="form-container form-hidden" id="form-aside">
+                <div class="section-header">
+                    <h2>Task Editor</h2>
+                    <p>Fill in the details below to create a new task or modify an existing one.</p>
+                </div>
+                <form id="todo-form">
+                    
+                    <input type="text" id="title" placeholder="Task Title" required>
+                    <textarea id="desc" placeholder="Description"></textarea>
+                    
+                    <div class="row">
+                        <select id="category">
+                            <option value="">Add category</option>
+                            <option value="Work">Work</option>
+                            <option value="Personal">Personal</option>
+                            <option value="Urgent">Urgent</option>
+                        </select>
+                        <input type="date" id="date" required>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" id="submit-btn">Add Task</button>
+                        <button type="button" id="cancel-btn" class="btn-secondary">Cancel</button>
+                    </div>
+                </form>
+            </aside>
+            <section id="task-list-section" class="task-display-area">
+                <div class="section-header">
+                    <h2>Current Schedule</h2>
+                    <p>Review and manage your active tasks to stay on track with your goals.</p>
+                </div>
+                <div id="task-list" class="task-grid">
+                </div>
+            </section>
+            
+        </main>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

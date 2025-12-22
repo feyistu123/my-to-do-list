@@ -1,0 +1,44 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "title": "Finish Project",
+      "description": "Complete the JSON Server To-Do app",
+      "category": "Work",
+      "dueDate": "2025-12-21",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "title": "reading",
+      "description": "reading fiction books on my free day",
+      "category": "Personal",
+      "dueDate": "2025-12-20",
+      "completed": false
+    },
+    {
+      "id": "3",
+      "title": "Project",
+      "description": "semister final project",
+      "category": "Work",
+      "dueDate": "2025-12-17",
+      "completed": false
+    },
+    {
+      "id": "f05c",
+      "title": "unkown",
+      "description": "desc",
+      "category": "Personal",
+      "dueDate": "2025-12-15",
+      "completed": false
+    },
+    {
+      "id": "f1e5",
+      "title": "web lab pro",
+      "description": "Done with a todo list web page all file html, css, js and json. Complete the JSON Server To-Do appliction ",
+      "category": "Work",
+      "dueDate": "2025-12-24",
+      "completed": false
+    }
+  ]
+}
