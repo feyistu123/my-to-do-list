@@ -2,10 +2,10 @@
   "todos": [
     {
       "id": "1",
-      "title": "Finish Project",
-      "description": "Complete the JSON Server To-Do app",
+      "title": "Web final project",
+      "description": "To done with the backend part of the web project, that the UI is already done, before the day of final exam is arrived.",
       "category": "Work",
-      "dueDate": "2025-12-21",
+      "dueDate": "2026-01-08",
       "completed": false
     },
     {
@@ -13,28 +13,36 @@
       "title": "reading",
       "description": "reading fiction books on my free day",
       "category": "Personal",
-      "dueDate": "2025-12-20",
+      "dueDate": "2025-12-28",
       "completed": false
     },
     {
       "id": "3",
-      "title": "Project",
-      "description": "semister final project",
+      "title": "Fix deployment startup issue",
+      "description": "Check why deployed app isn't responding. Ensure the server start command is correct and that required service like json-server --watch db.json",
+      "category": "Urgent",
+      "dueDate": "2025-12-22",
+      "completed": true
+    },
+    {
+      "id": "4",
+      "title": "FS project",
+      "description": "To start the implementation part of the FSE semister final project.",
       "category": "Work",
-      "dueDate": "2025-12-17",
+      "dueDate": "2025-12-24",
       "completed": false
     },
     {
       "id": "f05c",
-      "title": "unkown",
-      "description": "desc",
+      "title": "Sleep reset",
+      "description": "Prepare for sleep by putting phone away, setting alarm and aiming for at least 7 hr of rest.",
       "category": "Personal",
-      "dueDate": "2025-12-15",
+      "dueDate": "2025-12-24",
       "completed": false
     },
     {
       "id": "f1e5",
-      "title": "web lab pro",
+      "title": "Web lab project",
       "description": "Done with a todo list web page all file html, css, js and json. Complete the JSON Server To-Do appliction ",
       "category": "Work",
       "dueDate": "2025-12-24",
