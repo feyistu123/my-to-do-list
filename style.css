@@ -22,6 +22,13 @@
     --border: #e2e8f0;
 }
 
+
+body.dark {
+  --bg: #121212;
+  --card: #1e1e1e;
+  --text: #ffffff;
+}
+
 body {
     font-family: 'Inter', system-ui, sans-serif;
     background-color: var(--bg);
@@ -29,6 +36,7 @@ body {
     margin: 0;
     padding: 20px;
 }
+
 
 .container { 
     max-width: 80%;
