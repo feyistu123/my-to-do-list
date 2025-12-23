@@ -1,8 +1,20 @@
-const API_URL = 'http://localhost:3000/todos';
-
+const API_URL = 'https://my-json-server.typicode.com/feyistu123/my-to-do-list/todos';
+console.log("API_URL is loaded:", API_URL)
 export const TodoAPI = {
     // GET all tasks
-    getAll: () => fetch(API_URL).then(res => res.json()),
+    // getAll: () => fetch(API_URL).then(res => res.json()),
+    getAll: (params = {}) => {
+        const url = new URL(API_URL);
+        
+        // This loop automatically adds ?q=... or ?category=... to the URL
+        Object.keys(params).forEach(key => {
+            if (params[key]) {
+                url.searchParams.append(key, params[key]);
+            }
+        });
+
+        return fetch(url).then(res => res.json());
+    },
     // POST a new task
     create: (task) => fetch(API_URL, {
         method: 'POST',

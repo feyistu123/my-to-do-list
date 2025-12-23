@@ -19,19 +19,17 @@
                     <p>Fill in the details below to create a new task or modify an existing one.</p>
                 </div>
                 <form id="todo-form">
-                    
                     <input type="text" id="title" placeholder="Task Title" required>
                     <textarea id="desc" placeholder="Description"></textarea>
                     
-                    <div class="row">
-                        <select id="category">
-                            <option value="">Add category</option>
-                            <option value="Work">Work</option>
-                            <option value="Personal">Personal</option>
-                            <option value="Urgent">Urgent</option>
-                        </select>
-                        <input type="date" id="date" required>
-                    </div>
+                    <select id="category" required>
+                        <option value="" disabled selected>Select Category</option>
+                        <option value="Work">Work</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Urgent">Urgent</option>
+                    </select>
+
+                    <input type="date" id="date" required>
                     
                     <div class="form-actions">
                         <button type="submit" id="submit-btn">Add Task</button>
@@ -39,13 +37,26 @@
                     </div>
                 </form>
             </aside>
+
             <section id="task-list-section" class="task-display-area">
                 <div class="section-header">
                     <h2>Current Schedule</h2>
                     <p>Review and manage your active tasks to stay on track with your goals.</p>
                 </div>
-                <div id="task-list" class="task-grid">
+
+                <div class="filter-controls">
+                    <input type="text" id="search-input" placeholder="🔍 Search tasks...">
+                    
+                    <select id="category-filter">
+                        <option value="">📂 All Categories</option>
+                        <option value="Work">Work</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Urgent">Urgent</option>
+                    </select>
                 </div>
+
+                <div id="task-list" class="task-grid">
+                    </div>
             </section>
             
         </main>

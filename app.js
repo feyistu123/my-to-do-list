@@ -2,6 +2,8 @@ import { TodoAPI } from './api.js';
 
 // Elements
 const taskForm = document.querySelector('#todo-form');
+const searchInput = document.querySelector('#search-input');
+const categoryFilter = document.querySelector('#category-filter');
 const taskList = document.querySelector('#task-list');
 const taskListSection = document.querySelector('#task-list-section'); 
 const submitBtn = document.querySelector('#submit-btn');
@@ -35,7 +37,12 @@ toggleBtn.addEventListener('click', () => {
 
 // --- 2. Render Logic ---
 async function loadTasks() {
-    const tasks = await TodoAPI.getAll();
+    // 1. Get current values from the UI
+    const query = searchInput ? searchInput.value : '';
+    const category = categoryFilter ? categoryFilter.value : '';
+
+    // 2. Pass them to the API (the keys 'q' and 'category' match JSON-server rules)
+    const tasks = await TodoAPI.getAll({ q: query, category: category });
     if (!tasks) return; 
 
     taskList.innerHTML = '';
@@ -139,6 +146,15 @@ function resetForm() {
     submitBtn.style.background = "#4f46e5"; // Original Blue
     taskForm.reset(); // Clears the text inputs
 }
+// Search as you type (with a tiny delay is better, but this is simplest)
+searchInput.addEventListener('input', () => {
+    loadTasks();
+});
+
+// Filter when category changes
+categoryFilter.addEventListener('change', () => {
+    loadTasks();
+});
 
 // Initial Load
 loadTasks();

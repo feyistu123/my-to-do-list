@@ -175,3 +175,57 @@ button#submit-btn {
 #cancel-btn:hover {
     background-color: #6b7280;
 }
+
+
+/* Container for search and filter */
+.filter-controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #f9fafb;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    align-items: center;
+}
+
+/* Styling the Search Input */
+#search-input {
+    flex: 2; /* Makes search wider */
+    padding: 10px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#search-input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Styling the Dropdown */
+#category-filter {
+    flex: 1; /* Makes dropdown narrower */
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#category-filter:focus {
+    border-color: #4f46e5;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 600px) {
+    .filter-controls {
+        flex-direction: column;
+    }
+    #search-input, #category-filter {
+        width: 100%;
+    }
+}
