@@ -9,6 +9,8 @@ const taskListSection = document.querySelector('#task-list-section');
 const submitBtn = document.querySelector('#submit-btn');
 const toggleBtn = document.getElementById('toggle-form-btn');
 const formAside = document.getElementById('form-aside');
+const themeToggle = document.getElementById("themeToggle");
+
 
 // --- State Variables (CRITICAL: Added these) ---
 let editMode = false;
@@ -34,6 +36,11 @@ toggleBtn.addEventListener('click', () => {
     const isFormHidden = formAside.classList.contains('form-hidden');
     toggleView(isFormHidden); 
 });
+// dark mode toggle
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
+
 
 // --- 2. Render Logic ---
 async function loadTasks() {
