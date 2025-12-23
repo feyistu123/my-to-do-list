@@ -1,20 +1,28 @@
-const API_URL = 'https://my-json-server.typicode.com/feyistu123/my-to-do-list/todos';
-console.log("API_URL is loaded:", API_URL)
+// 1. Detect environment
+const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+// 2. Set URL (Replace 'feyistu123' and 'todo-list' with your actual GitHub info)
+const API_URL = isLocal 
+    ? 'http://localhost:3000/todos' 
+    : 'https://my-json-server.typicode.com/feyistu123/todo-list/todos';
+
+console.log("Connected to:", API_URL);
+
 export const TodoAPI = {
-    // GET all tasks
-    // getAll: () => fetch(API_URL).then(res => res.json()),
+    // GET all tasks (supports ?q= and ?category=)
     getAll: (params = {}) => {
         const url = new URL(API_URL);
         
-        // This loop automatically adds ?q=... or ?category=... to the URL
+        // Appends search parameters to the URL
         Object.keys(params).forEach(key => {
             if (params[key]) {
                 url.searchParams.append(key, params[key]);
             }
         });
-
+        console.log("Fetching from URL:", url.toString());
         return fetch(url).then(res => res.json());
     },
+
     // POST a new task
     create: (task) => fetch(API_URL, {
         method: 'POST',
