@@ -236,4 +236,12 @@ button#submit-btn {
     #search-input, #category-filter {
         width: 100%;
     }
+    .task-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: left;
+    margin-top: 3rem;
+    max-width: 800px;
+}
 }
